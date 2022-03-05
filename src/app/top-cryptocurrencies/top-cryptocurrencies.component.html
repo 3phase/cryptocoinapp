@@ -1,0 +1,20 @@
+<div class="group column">
+  <div class="group_1 row">
+    <button igxButton="raised" igxRipple class="button">
+      <igx-icon>grid_on</igx-icon>
+      <span>Export to Excel</span>
+    </button>
+  </div>
+  <div class="group_2 row">
+    <igx-grid [data]="coindataTable1" primaryKey="Rank" [autoGenerate]="false" displayDensity="cosy" class="grid">
+      <igx-column header="Rank" field="Rank" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="Rank" [disablePinning]="false" [disableHiding]="false"></igx-column>
+      <igx-column header="Symbol" field="Symbol" dataType="string" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="Symbol" [disablePinning]="false" [disableHiding]="false"></igx-column>
+      <igx-column header="Name" field="Name" dataType="string" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="Name" [disablePinning]="false" [disableHiding]="false"></igx-column>
+      <igx-column header="CurrentPrice" field="CurrentPrice" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="CurrentPrice" [disablePinning]="false" [disableHiding]="false"></igx-column>
+      <igx-column header="MarketCap" field="MarketCap" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="MarketCap" [disablePinning]="false" [disableHiding]="false"></igx-column>
+      <igx-column header="PercentageChange24h" field="PercentageChange24h" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="PercentageChange24h" [disablePinning]="false" [disableHiding]="false"></igx-column>
+      <igx-column header="PercentageChange7d" field="PercentageChange7d" dataType="number" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="PercentageChange7d" [disablePinning]="false" [disableHiding]="false"></igx-column>
+      <igx-column header="URL" field="URL" dataType="string" [sortable]="true" [filterable]="true" [searchable]="true" [selectable]="true" title="URL" [disablePinning]="false" [disableHiding]="false"></igx-column>
+    </igx-grid>
+  </div>
+</div>

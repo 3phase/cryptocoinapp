@@ -1,0 +1,72 @@
+:host {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.group {
+  flex-wrap: wrap;
+  padding: 24px;
+  flex-grow: 1;
+  flex-basis: 0;
+  position: relative;
+  align-items: stretch;
+  min-height: 50px;
+  min-width: 50px;
+}
+.actions-content {
+  min-height: 40px;
+  min-width: 50px;
+}
+.group_1 {
+  position: relative;
+  align-items: stretch;
+  min-height: 50px;
+  min-width: 50px;
+}
+.group_2 {
+  width: 70%;
+  align-items: stretch;
+  min-height: 50px;
+  min-width: 50px;
+}
+.group_3 {
+  width: 30%;
+  align-items: stretch;
+  min-height: 50px;
+  min-width: 50px;
+}
+.group_4 {
+  align-items: stretch;
+  min-height: 50px;
+  min-width: 50px;
+}
+.text {
+  min-width: min-content;
+  height: max-content;
+}
+.body-content {
+  min-height: 50px;
+  min-width: 50px;
+}
+.card {
+  margin: 20px;
+  width: 280px;
+  height: max-content;
+  min-width: 280px;
+  flex-shrink: 0;
+}
+.avatar {
+  color: hsla(var(--igx-grays-800));
+  background-color: hsla(var(--igx-grays-400));
+}
+.button {
+  height: max-content;
+  min-width: min-content;
+}
+.row {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,61 @@
+<igx-navbar class="navbar">
+  <igx-navbar-action>
+    <button igxButton="icon" igxRipple [igxToggleAction]="navDrawer">
+      <igx-icon>menu</igx-icon>
+    </button>
+  </igx-navbar-action>
+  <ng-container>
+    <button igxButton="icon" igxRipple [igxToggleAction]="dialog" class="button">
+      <igx-icon>person</igx-icon>
+    </button>
+  </ng-container>
+  <igx-navbar-title>CryptoCoin</igx-navbar-title>
+</igx-navbar>
+<div class="group_2 row">
+  <igx-nav-drawer [isOpen]="true" width="320px" [pin]="true" [pinThreshold]="768" #navDrawer class="nav-drawer">
+    <ng-template igxDrawer>
+      <span [isHeader]="false" [active]="false" igxDrawerItem routerLink="/top-cryptocurrencies" class="nav-drawer-item">
+        <igx-icon family="material" class="icon">dashboard</igx-icon>
+        <span class="span">Top Cryptocurrencies</span>
+      </span>
+      <span [isHeader]="false" [active]="false" igxDrawerItem routerLink="/price-chart" class="nav-drawer-item">
+        <igx-icon family="material" class="icon">show_chart</igx-icon>
+        <span class="span">Price Chart</span>
+      </span>
+      <span [isHeader]="false" [active]="false" igxDrawerItem routerLink="/my-watchlist" class="nav-drawer-item">
+        <igx-icon family="material" class="icon">star</igx-icon>
+        <span class="span">My Watchlist</span>
+      </span>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #dialog class="dialog">
+  <ng-container>
+    <div class="group_1 column">
+      <div class="group column">
+        <igx-avatar src="http://bit.ly/cmconf-image" [roundShape]="true" size="large" class="avatar"></igx-avatar>
+        <h5 class="element">Login to CryptoCoin</h5>
+      </div>
+      <button igxButton="raised" igxRipple class="user-input">
+        <igx-icon>donut_small</igx-icon>
+        <span>Login with Google</span>
+      </button>
+      <p class="igx-typography__overline text">Or</p>
+      <igx-input-group type="border" class="user-input">
+        <input type="email" [required]="false" igxInput />
+        <label igxLabel>Email address</label>
+      </igx-input-group>
+      <igx-input-group type="border" class="user-input">
+        <input type="password" [required]="false" igxInput />
+        <label igxLabel>Password</label>
+      </igx-input-group>
+      <a target="_blank" class="igx-typography__body-1 element">Forgot your password?</a>
+      <button igxButton="raised" igxRipple class="user-input">Login</button>
+      <button igxButton="outlined" igxRipple class="user-input">Create A New Account</button>
+    </div>
+  </ng-container>
+  <igx-dialog-actions></igx-dialog-actions>
+</igx-dialog>
