@@ -1,6 +1,10 @@
 <div class="group column">
   <div class="group_2 row">
-    <igx-combo type="border" [data]="coindataTable1" valueKey="Symbol" displayKey="Name" [filterable]="true" [autoFocusSearch]="true" class="combo"></igx-combo>
+    <igx-combo type="border" [data]="coindataTable1" valueKey="Symbol" displayKey="Name" [filterable]="true"
+      [autoFocusSearch]="true" class="combo"></igx-combo>
   </div>
-  <div class="group_1 row"></div>
+  <div class="group_1 row">
+    <igx-financial-chart [dataSource]="data" height="600px" width="100%">
+    </igx-financial-chart>
+  </div>
 </div>

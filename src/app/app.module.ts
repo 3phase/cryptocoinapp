@@ -9,13 +9,16 @@ import { FormsModule } from '@angular/forms';
 import { PriceChartComponent } from './price-chart/price-chart.component';
 import { MyWatchlistComponent } from './my-watchlist/my-watchlist.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NewFinancialChartComponent } from './newfinancialchart/newfinancialchart.component';
+import { IgxFinancialChartModule } from 'igniteui-angular-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopCryptocurrenciesComponent,
     PriceChartComponent,
-    MyWatchlistComponent
+    MyWatchlistComponent,
+    NewFinancialChartComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     IgxNavigationDrawerModule,
     IgxDialogModule,
     IgxInputGroupModule,
-    HttpClientModule
+    HttpClientModule,
+    IgxFinancialChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
